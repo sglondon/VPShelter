@@ -11,14 +11,16 @@ namespace VPShelter
 
         
         private string name = "";
-        private string petType = "";
+        
         private string description = "";
         private bool isHungry;
         private bool isThirsty;
         private bool isBored;
         private string colorFur;
         private int age;
-        private string petDiet = "";
+        private string petType;
+        private string petDiet;
+        
 
 
 
@@ -34,11 +36,7 @@ namespace VPShelter
         }
 
 
-        public string PetType
-        {
-            get { return this.petType; }
-            set { this.petType = value; }
-        }
+        
 
         public bool IsHungry
         {
@@ -78,6 +76,12 @@ namespace VPShelter
             set { this.description = value; }
         }
 
+        public string PetType
+        {
+            get { return this.petType; }
+            set { this.petType = value; }
+        }
+
         public string PetDiet
         {
             get { return this.petDiet; }
@@ -100,20 +104,21 @@ namespace VPShelter
 
 
 
-        public VirtualPetBase(string name, string petType, string description, bool isHungry, bool isThirsty, bool isBored, string colorFur, int age, string petDiet)
+        public VirtualPetBase(string name, string description, bool isHungry, bool isThirsty, bool isBored, string colorFur, int age, string petType, string petDiet)
         {
             this.name = name;
-            this.petType = petType;
+
             this.description = description;
             this.isHungry = isHungry;
             this.isThirsty = isThirsty;
             this.isBored = isBored;
             this.colorFur = colorFur;
             this.age = age;
-            this.petDiet = petDiet;
+           this.petType = petType;
+           this.petDiet = petDiet;
+        
 
-
-        }
+    }
 
 
 
@@ -141,7 +146,7 @@ namespace VPShelter
 
         //public virtual string TypeofPet(string value)
         //{
-            
+
         //    value = "Hamster";
         //    return value;
         //}

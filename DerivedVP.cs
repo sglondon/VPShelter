@@ -4,28 +4,53 @@ using System.Text;
 
 namespace VPShelter
 {
-    class DerivedVP : VirtualPetBase
-    {
-        
+   public class DerivedVP : VirtualPetBase
+    {  //addt'l fields
+
+        //private string petType = "";
+        //private string petDiet = "";
+
+
+        ////addt'l properties
+
+        //public string PetType
+        //{
+        //    get { return this.petType; }
+        //    set { this.petType = value; }
+        //}
+
+        //public string PetDiet
+        //{
+        //    get { return this.petDiet; }
+        //    set { this.petDiet = value; }
+        //}
 
         public DerivedVP()
         {
             //default constructor
         }
 
+
+        //public DerivedVP(string name,  string petType)
+        //{
+        //    Name = name;
+        //    PetType = petType;
+
+        //}
         public DerivedVP(string name, string petType, string description, bool isHungry, bool isThirsty, bool isBored, string colorFur, int age, string petDiet)
         {
-            this.Name = name;
-            this.PetType = petType;
-            this.Description = description;
-            this.IsHungry = isHungry;
-          //  this.IsThirsty = isThirsty;
-            this.IsBored = isBored;
-            this.ColorFur = colorFur;
-            this.Age = age;
-            this.PetDiet = petDiet;
+            Name = name;
+            PetType = petType;
+            Description = description;
+            IsHungry = isHungry;
+            IsThirsty = isThirsty;
+            IsBored = isBored;
+            ColorFur = colorFur;
+            Age = age;
+            PetDiet = petDiet;
 
         }
+
 
     }
 }

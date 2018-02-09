@@ -1,5 +1,8 @@
 ﻿using System;
 
+using System.Collections.Generic;
+using System.Text;
+
 namespace VPShelter
 {
     class Program
@@ -10,35 +13,69 @@ namespace VPShelter
 
             //instantiate virtualpetbase object
 
-            DerivedVP hamster = new DerivedVP("Bear", "Hamster", "funny little guy", true, true, true, "orange & white", 1, "sunflower seeds");
 
-            DerivedVP cat = new DerivedVP("Shanty", "Cat", "short hair, happy cat", false, false, false, "black & white", 2, "tuna");
+      //      DerivedVP newpet1 = new DerivedVP("Bear", "Hamster");
+
+           DerivedVP newpet1 = new DerivedVP("Bear", "Hamster", "funny little guy", true, true, false, "orange and white", 1, "sunflower seeds");
+
+           
+
+            //      DerivedVP cat = new DerivedVP("Shanty", "Cat", "short hair, happy cat", false, false, false, "black & white", 2, "tuna");
 
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("To see your pet's name, type 1");
-            Console.WriteLine("To see what type of pet you have, type 2");
-            Console.WriteLine("To feed your pet, type 2");
-            Console.WriteLine("To see if your pet needs some attention, type 3");
-            Console.WriteLine("To see how old your pet is, type 4");
-            Console.WriteLine("To see what color fur your pet has, type 5");
-            Console.WriteLine("To see your bunny's details, type 6");
-            Console.WriteLine("To change the color of your pet's fur, type 7");
-            Console.WriteLine("To play with your pet, type 8");
-            Console.WriteLine("To quit, type 9");
+            Console.WriteLine("Welcome to the Virtual Pet Shelter.");
+            Console.WriteLine("What type of employee are you?");
+            Console.WriteLine("1. Manager");
+            Console.WriteLine("2. Volunteer");
             userChoice = int.Parse(Console.ReadLine());
-            Console.WriteLine();
-            Console.WriteLine();
+            //DerivedVP hamster = new DerivedVP();
+
+            //hamster.Name = "Bear";
+            //hamster.PetType = "Hamster";
+            //hamster.IsHungry = true;
+            //hamster.IsThirsty = true;
+
+
+
+            //Console.WriteLine("To see your pet's name, type 1");
+            //Console.WriteLine("To see what type of pet you have, type 2");
+            //Console.WriteLine("To feed your pet, type 2");
+            //Console.WriteLine("To see if your pet needs some attention, type 3");
+            //Console.WriteLine("To see how old your pet is, type 4");
+            //Console.WriteLine("To see what color fur your pet has, type 5");
+            //Console.WriteLine("To see your bunny's details, type 6");
+            //Console.WriteLine("To change the color of your pet's fur, type 7");
+            //Console.WriteLine("To play with your pet, type 8");
+            //Console.WriteLine("To quit, type 9");
+            //userChoice = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //Console.WriteLine();
             switch (userChoice)
             {
                 case 1:
-                    
-                    Console.WriteLine("Your pet's name is " + hamster.Name + ".");
+
+                    Console.WriteLine("Thank you for volunteering at the Virtual Pet Shelter!");
+                    Console.WriteLine("This is the status of the pets today");
+                 Console.WriteLine(newpet1);
+               //     Console.WriteLine(cat);
                     break;
 
                 case 2:
-                    Console.WriteLine("Your pet is a " + hamster.PetType + ".");
+                    Console.WriteLine("Thanks for coming to work today!");
+
                     break;
+
+            }
+            //{
+            //    case 1:
+
+            //        Console.WriteLine("Your pet's name is " + hamster.Name + ".");
+            //        break;
+
+            //    case 2:
+            //        Console.WriteLine("Your pet is a " + hamster.PetType + ".");
+            //        break;
 
             //    case 3:
             //        Console.WriteLine();
@@ -87,17 +124,17 @@ namespace VPShelter
             //        break;
             //}
 
-        } while (userChoice != 0);
+            //  } while (userChoice != 0);
+
+
+
+
+
+
+
 
 
         }
-
-
-
-
-
-
-}
     }
+}
 
-//}
