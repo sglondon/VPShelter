@@ -46,7 +46,7 @@ namespace VPShelter
             set { this.isHungry = value; }
         }
 
-        public string IsThirsty
+        public bool IsThirsty
         {
             get { return this.IsThirsty; }
             set { this.IsThirsty = value; }
@@ -117,55 +117,69 @@ namespace VPShelter
 
 
 
-        //Create Methods() to:
-        // display pet's name
+        //Create virtual Methods() to:
+
+        //identify type of pet
         //feed pet
+        //describe pet
         //check if pet is bored        
         //change pet's fur color with user input
         //increment pet's age
         //give pet a toy with user input, this changes the value of isBored
+        //define pet's diet
 
 
 
-        public void BunnyName()
-        {
+        //public virtual string PetName()
+        //{
 
-            Console.WriteLine("Your Bunny's name is Twitch!");
-        }
+        //   string value = "Bear";
+        //    return value;
+        //}
+
+        ////identify type of pet
+
+        //public virtual string TypeofPet(string value)
+        //{
+            
+        //    value = "Hamster";
+        //    return value;
+        //}
 
 
-        //method to feed Twitch
+
+        //method to feed Pet
 
 
-        public string FeedTwitch(string food)
+        public string FeedPet(string food)
         {
             if (food == "yes")
 
             {
                 isHungry = false;
-                return "Twitch is happy that he has been fed!";
+                return this.name + " is happy that he has been fed!";
             }
             else if (food != "yes")
                 isHungry = true;
-            return "Twitch is so hungry!";
+            return this.name + " is so hungry!";
         }
 
         //method to see if Twitch is bored
 
-        public string BoredBunny()
+        public string BoredPet()
         {
             if (isBored == false)
             {
-                return "Twitch is happy and alert!";
+                return this.name + " is happy and alert!";
 
             }
             else
             {
-                return "Twitch is very bored and is getting into mischief!";
+                return this.name + " is very bored and is getting into mischief!";
             }
         }
 
-        //method to change the color of Twitch's fur
+        //method to change the color of the pet's fur
         //using user input
 
         public string FurChange(string newFur)
@@ -183,11 +197,11 @@ namespace VPShelter
             if (toy == "yes")
             {
                 isBored = false;
-                return "Twitch now has a ball :)";
+                return this.name + " now has a toy :)";
             }
             else if (toy == "no") ;
             isBored = true;
-            return "Twitch has nothing to play with :(";
+            return this.name + " has nothing to play with :(";
         }
 
         //method to increment age

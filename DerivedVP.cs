@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VPShelter
 {
-    class DerivedVP
+    class DerivedVP : VirtualPetBase
     {
         
 
@@ -15,6 +15,15 @@ namespace VPShelter
 
         public DerivedVP(string name, string petType, string description, bool isHungry, bool isThirsty, bool isBored, string colorFur, int age, string petDiet)
         {
+            this.Name = name;
+            this.PetType = petType;
+            this.Description = description;
+            this.IsHungry = isHungry;
+          //  this.IsThirsty = isThirsty;
+            this.IsBored = isBored;
+            this.ColorFur = colorFur;
+            this.Age = age;
+            this.PetDiet = petDiet;
 
         }
 
