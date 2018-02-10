@@ -36,17 +36,19 @@ namespace VPShelter
         }
 
 
-        public void PetAdoption()
+        public string PetAdoption(string answer)
         {
-            if (adoptAPet == true)
+            if (answer == "Bear")
             {
-                Console.WriteLine("Congratulations! You've adopted a pet.");
+                return "Congratulations! You've adopted a hamster!";
             }
-            else if(adoptAPet != true)
+            else if (answer == "Shanty")
             {
-                Console.WriteLine("Thanks anyway, maybe next time.");
+                return "Congratulations, You've adopted a cat!";
             }
+            else return "Maybe next time.";
         } 
+
 
 
 
