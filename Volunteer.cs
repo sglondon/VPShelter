@@ -27,7 +27,7 @@ namespace VPShelter
 
         public override void GetEmployeeSalary()
         {
-            Console.WriteLine("You're a volunteer, you don't get any salary!");
+            Console.WriteLine("You're a volunteer, you don't get any salary, haha!");
         }
 
 
@@ -69,6 +69,17 @@ namespace VPShelter
         }
 
 
+        public string GiveToy(string pet)
+        {
+            if (pet == "bear")
+            {
+
+                return pet + " enjoyed playing! :)";
+            }
+            else if (pet == "shanty") ;
+
+            return pet + " enjoyed playing! :)";
+        }
 
     }
 

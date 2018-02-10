@@ -206,17 +206,7 @@ namespace VPShelter
         //method to change the value of isBored
         //by giving the pet a toy
 
-        //public string GiveToy(string toy)
-        //{
-        //    if (toy == "yes")
-        //    {
-        //        isBored = false;
-        //        return this.name + " now has a toy :)";
-        //    }
-        //    else if (toy == "no") ;
-        //    isBored = true;
-        //    return this.name + " has nothing to play with :(";
-        //}
+
 
         //method to increment age
 

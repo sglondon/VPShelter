@@ -36,11 +36,12 @@ namespace VPShelter
                     Console.WriteLine("Thank you for volunteering at the Virtual Pet Shelter!");
                     Console.Clear();
                     Console.WriteLine();
-                    Console.WriteLine("This is the status of the pets today");
+                    Console.WriteLine("Hi Volunteer!");
+                    Console.WriteLine("Here is the status of the pets today:");
                     Console.WriteLine();
-                    Console.WriteLine(hamster.Name + " the "+ hamster.PetType + " " + hamster.IsHungry + ", " + hamster.IsThirsty + ", and " + hamster.IsBored);
-
-                    Console.WriteLine(cat.Name + " the " + cat.PetType + " " + cat.IsHungry + ", " + cat.IsThirsty + ", and " + cat.IsBored);
+                    Console.WriteLine(hamster.Name + " the "+ hamster.PetType + ":" +"\n" + hamster.IsHungry + ", " + hamster.IsThirsty + "," + hamster.IsBored + ".");
+                    Console.WriteLine();
+                    Console.WriteLine(cat.Name + " the " + cat.PetType + "\n" + cat.IsHungry + ", " + cat.IsThirsty + ", " + cat.IsBored + ".");
                     Console.WriteLine();
                     Console.WriteLine("What would you like to do with the pets?");
 
@@ -58,6 +59,10 @@ namespace VPShelter
                         {
                             case 1:
                                 Console.Clear();
+                                Console.WriteLine(hamster.Name + " the " + hamster.PetType + " likes to eat " + hamster.PetDiet + ".");
+                                Console.WriteLine();
+                                Console.WriteLine(cat.Name + " the " + cat.PetType + " likes to eat " + cat.PetDiet + ".");
+                                Console.WriteLine();
                                 emp1.FeedAllPets();                                
                                 Console.WriteLine();
                                 emp1.Message();
@@ -78,11 +83,25 @@ namespace VPShelter
                                 emp1.Message();
                                 break;
 
+                            case 4:
+                                Console.Clear();
+                                Console.WriteLine("Which pet would you like to play with, Bear or Shanty?");
+                                string pet = Console.ReadLine().ToUpper();
+                                Console.Clear();
+                                Console.WriteLine(emp1.GiveToy(pet));
+                                Console.WriteLine();                                
+                                emp1.Message();
+                                break;
+
+                            case 5:
+                                emp1.Quit();
+                                userChoice = 5;
+                                break;
                         }
                         
                     } while (userChoice != 5) ;
                     break;
-
+                    
                     
                     
 

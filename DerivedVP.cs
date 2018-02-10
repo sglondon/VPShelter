@@ -53,17 +53,7 @@ namespace VPShelter
 
         //methods
 
-        //public void GiveToy(string toy)
-        //{
-        //    if (toy == "yes")
-        //    {
-        //        isBored = false;
-        //        return this.name + " now has a toy :)";
-        //    }
-        //    else if (toy == "no") ;
-        //    isBored = true;
-        //    return this.name + " has nothing to play with :(";
-        //}
+       
 
 
     }
