@@ -26,8 +26,8 @@ namespace VPShelter
             Console.WriteLine();
             Console.WriteLine("Welcome to the Virtual Pet Shelter.");
             Console.WriteLine("What type of employee are you?");
-            Console.WriteLine("1. Manager");
-            Console.WriteLine("2. Volunteer");
+            Console.WriteLine("1. Volunteer");
+            Console.WriteLine("2. Manager");
             userChoice = int.Parse(Console.ReadLine());
             //DerivedVP hamster = new DerivedVP();
 
@@ -57,8 +57,16 @@ namespace VPShelter
 
                     Console.WriteLine("Thank you for volunteering at the Virtual Pet Shelter!");
                     Console.WriteLine("This is the status of the pets today");
-                 Console.WriteLine(newpet1);
-               //     Console.WriteLine(cat);
+
+                    //if (newpet1.IsHungry == true)
+                    //{
+                    //    string hungry = "is hungry";
+
+                    newpet1.HungryPet();
+
+                    Console.WriteLine(newpet1.Name + newpet1.IsHungry + newpet1.IsThirsty + newpet1.IsBored);
+
+                    //     Console.WriteLine(cat);
                     break;
 
                 case 2:
@@ -66,73 +74,73 @@ namespace VPShelter
 
                     break;
 
+
+                    //{
+                    //    case 1:
+
+                    //        Console.WriteLine("Your pet's name is " + hamster.Name + ".");
+                    //        break;
+
+                    //    case 2:
+                    //        Console.WriteLine("Your pet is a " + hamster.PetType + ".");
+                    //        break;
+
+                    //    case 3:
+                    //        Console.WriteLine();
+                    //        Console.WriteLine("Would you like to give " + hamster.Name + " some food? Please type yes or no");
+                    //        string food = Console.ReadLine();
+                    //        Console.WriteLine(hamster.FeedPet(food));
+                    //        break;
+
+                    //    case 3:
+                    //        Console.WriteLine(userBunny.BoredBunny());
+                    //        break;
+
+                    //    case 4:
+                    //        Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
+                    //        break;
+
+                    //    case 5:
+                    //        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
+                    //        break;
+
+                    //    case 6:
+                    //        Console.WriteLine();
+                    //        Console.WriteLine();
+                    //        Console.WriteLine("Your Bunny's name is " + userBunny.Name);
+                    //        Console.WriteLine(userBunny.FeedTwitch("yes"));
+                    //        Console.WriteLine(userBunny.BoredBunny());
+                    //        Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
+                    //        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
+                    //        break;
+
+                    //    case 7:
+                    //        Console.WriteLine();
+                    //        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
+                    //        Console.WriteLine();
+                    //        Console.WriteLine("What color would you like to make Twitch's fur?, please enter a color.");
+                    //        string newFur = Console.ReadLine();
+                    //        Console.WriteLine();
+                    //        Console.WriteLine("Twitch's fur is now " + userBunny.FurChange(newFur) + " !");
+                    //        break;
+
+                    //    case 8:
+                    //        Console.WriteLine();
+                    //        Console.WriteLine("Would you like to give Twitch a toy? Please type yes or no");
+                    //        string toy = Console.ReadLine();
+                    //        Console.WriteLine(userBunny.GiveToy(toy));
+                    //        break;
+                    //}
+
+                    //  } while (userChoice != 0);
+
+
+
+
+
+
+
             }
-            //{
-            //    case 1:
-
-            //        Console.WriteLine("Your pet's name is " + hamster.Name + ".");
-            //        break;
-
-            //    case 2:
-            //        Console.WriteLine("Your pet is a " + hamster.PetType + ".");
-            //        break;
-
-            //    case 3:
-            //        Console.WriteLine();
-            //        Console.WriteLine("Would you like to give " + hamster.Name + " some food? Please type yes or no");
-            //        string food = Console.ReadLine();
-            //        Console.WriteLine(hamster.FeedPet(food));
-            //        break;
-
-            //    case 3:
-            //        Console.WriteLine(userBunny.BoredBunny());
-            //        break;
-
-            //    case 4:
-            //        Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
-            //        break;
-
-            //    case 5:
-            //        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
-            //        break;
-
-            //    case 6:
-            //        Console.WriteLine();
-            //        Console.WriteLine();
-            //        Console.WriteLine("Your Bunny's name is " + userBunny.Name);
-            //        Console.WriteLine(userBunny.FeedTwitch("yes"));
-            //        Console.WriteLine(userBunny.BoredBunny());
-            //        Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
-            //        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
-            //        break;
-
-            //    case 7:
-            //        Console.WriteLine();
-            //        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
-            //        Console.WriteLine();
-            //        Console.WriteLine("What color would you like to make Twitch's fur?, please enter a color.");
-            //        string newFur = Console.ReadLine();
-            //        Console.WriteLine();
-            //        Console.WriteLine("Twitch's fur is now " + userBunny.FurChange(newFur) + " !");
-            //        break;
-
-            //    case 8:
-            //        Console.WriteLine();
-            //        Console.WriteLine("Would you like to give Twitch a toy? Please type yes or no");
-            //        string toy = Console.ReadLine();
-            //        Console.WriteLine(userBunny.GiveToy(toy));
-            //        break;
-            //}
-
-            //  } while (userChoice != 0);
-
-
-
-
-
-
-
-
 
         }
     }

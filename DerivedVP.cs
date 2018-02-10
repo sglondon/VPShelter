@@ -51,6 +51,30 @@ namespace VPShelter
 
         }
 
+        //methods
+
+        public void HungryPet()
+        {
+            
+            if (IsHungry == true)
+            {
+
+                Console.WriteLine("is hungry");
+            }
+            else Console.WriteLine("is not hungry");
+        }
+
+        public void ThirstyPet()
+        {
+
+            if (IsThirsty == true)
+            {
+
+                Console.WriteLine("is thirsty");
+            }
+            else Console.WriteLine("is not thirsty");
+        }
+
 
     }
 }

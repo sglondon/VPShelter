@@ -46,8 +46,8 @@ namespace VPShelter
 
         public bool IsThirsty
         {
-            get { return this.IsThirsty; }
-            set { this.IsThirsty = value; }
+            get { return this.isThirsty; }
+            set { this.isThirsty = value; }
         }
 
 
@@ -154,6 +154,15 @@ namespace VPShelter
 
 
         //method to feed Pet
+
+        //public string HungyPet()
+        //{
+        //    if (isHungry == true)
+        //    {
+        //        return "is hungry";
+        //    }
+        //    else return "is not hungry";
+        //}
 
 
         public string FeedPet(string food)
