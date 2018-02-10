@@ -31,12 +31,7 @@ namespace VPShelter
         }
 
 
-        //public DerivedVP(string name,  string petType)
-        //{
-        //    Name = name;
-        //    PetType = petType;
-
-        //}
+        
         public DerivedVP(string name, string petType, string description, string isHungry, string isThirsty, string isBored, string colorFur, int age, string petDiet)
         {
             Name = name;

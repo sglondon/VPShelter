@@ -18,7 +18,7 @@ namespace VPShelter
         public abstract void GetEmployeeSalary();
         public abstract void Quit();
 
-
+       
 
 
 

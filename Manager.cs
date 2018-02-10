@@ -17,10 +17,28 @@ namespace VPShelter
             set { this.adoptAPet = value; }
         }
 
+        public Manager()
+        {
+            //default constructor
 
+        }
 
+        public Manager (bool adoptAPet)
+        {
+            this.adoptAPet = adoptAPet;
+        }
 
+        //methods
 
+        public void FeedAllPets()
+        {
+            Console.WriteLine("All the pets have been fed.");
+        }
+
+        public void WaterAllPets()
+        {
+            Console.WriteLine("All of the pets have been given water.");
+        }
 
         public override void GetEmployeeSalary()
         {
@@ -38,11 +56,11 @@ namespace VPShelter
 
         public string PetAdoption(string answer)
         {
-            if (answer == "Bear")
+            if (answer == "bear")
             {
                 return "Congratulations! You've adopted a hamster!";
             }
-            else if (answer == "Shanty")
+            else if (answer == "shanty")
             {
                 return "Congratulations, You've adopted a cat!";
             }
