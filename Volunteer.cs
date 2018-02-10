@@ -6,11 +6,24 @@ namespace VPShelter
 {
     public class Volunteer : Employee
     {
+        //field
 
+        private bool cleanCage;
         
         
-        public bool CleanCage { get; set; }
+        public bool CleanCage
+        {
+            get { return this.cleanCage; }
+            set { this.cleanCage = value; }
+        }
 
+        //constructor
+
+            public Volunteer (bool CleanCage)
+        {
+            this.cleanCage = cleanCage;
+            
+        }
 
         public override void GetEmployeeSalary()
         {
@@ -30,7 +43,11 @@ namespace VPShelter
             }
         }
 
+        public void Message()
+        {
+            Console.WriteLine("What would you like to do next?");
 
+        }
 
 
 

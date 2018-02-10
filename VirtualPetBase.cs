@@ -13,9 +13,9 @@ namespace VPShelter
         private string name = "";
         
         private string description = "";
-        private bool isHungry;
-        private bool isThirsty;
-        private bool isBored;
+        private string isHungry;
+        private string isThirsty;
+        private string isBored = "";
         private string colorFur;
         private int age;
         private string petType;
@@ -38,20 +38,20 @@ namespace VPShelter
 
         
 
-        public bool IsHungry
+        public string IsHungry
         {
             get { return this.isHungry; }
             set { this.isHungry = value; }
         }
 
-        public bool IsThirsty
+        public string IsThirsty
         {
             get { return this.isThirsty; }
             set { this.isThirsty = value; }
         }
 
 
-        public bool IsBored
+        public string IsBored
         {
             get { return this.isBored; }
             set { this.isBored = value; }
@@ -104,7 +104,7 @@ namespace VPShelter
 
 
 
-        public VirtualPetBase(string name, string description, bool isHungry, bool isThirsty, bool isBored, string colorFur, int age, string petType, string petDiet)
+        public VirtualPetBase(string name, string description, string isHungry, string isThirsty, string isBored, string colorFur, int age, string petType, string petDiet)
         {
             this.name = name;
 
@@ -165,33 +165,33 @@ namespace VPShelter
         //}
 
 
-        public string FeedPet(string food)
-        {
-            if (food == "yes")
+        //public string FeedPet(string food)
+        //{
+        //    if (food == "yes")
 
-            {
-                isHungry = false;
-                return this.name + " is happy that he has been fed!";
-            }
-            else if (food != "yes")
-                isHungry = true;
-            return this.name + " is so hungry!";
-        }
+        //    {
+        //        isHungry = false;
+        //        return this.name + " is happy that he has been fed!";
+        //    }
+        //    else if (food != "yes")
+        //        isHungry = true;
+        //    return this.name + " is so hungry!";
+        //}
 
         //method to see if Twitch is bored
 
-        public string BoredPet()
-        {
-            if (isBored == false)
-            {
-                return this.name + " is happy and alert!";
+        //public string BoredPet()
+        //{
+        //    if (isBored == false)
+        //    {
+        //        return this.name + " is happy and alert!";
 
-            }
-            else
-            {
-                return this.name + " is very bored and is getting into mischief!";
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        return this.name + " is very bored and is getting into mischief!";
+        //    }
+        //}
 
         //method to change the color of the pet's fur
         //using user input
@@ -206,17 +206,17 @@ namespace VPShelter
         //method to change the value of isBored
         //by giving the pet a toy
 
-        public string GiveToy(string toy)
-        {
-            if (toy == "yes")
-            {
-                isBored = false;
-                return this.name + " now has a toy :)";
-            }
-            else if (toy == "no") ;
-            isBored = true;
-            return this.name + " has nothing to play with :(";
-        }
+        //public string GiveToy(string toy)
+        //{
+        //    if (toy == "yes")
+        //    {
+        //        isBored = false;
+        //        return this.name + " now has a toy :)";
+        //    }
+        //    else if (toy == "no") ;
+        //    isBored = true;
+        //    return this.name + " has nothing to play with :(";
+        //}
 
         //method to increment age
 
@@ -227,21 +227,7 @@ namespace VPShelter
 
         //method to display a message
 
-        public void Message()
-        {
-
-            string[] wheresBunny = new string[]
-            {
-                "What woud ",
-                "you like  ",
-                "to do?"
-            };
-            //foreach (string value in wheresBunny)
-            //{
-            //    Console.Write(value);
-            //}
-
-        }
+       
 
         
 

@@ -37,7 +37,7 @@ namespace VPShelter
         //    PetType = petType;
 
         //}
-        public DerivedVP(string name, string petType, string description, bool isHungry, bool isThirsty, bool isBored, string colorFur, int age, string petDiet)
+        public DerivedVP(string name, string petType, string description, string isHungry, string isThirsty, string isBored, string colorFur, int age, string petDiet)
         {
             Name = name;
             PetType = petType;
@@ -53,27 +53,17 @@ namespace VPShelter
 
         //methods
 
-        public void HungryPet()
-        {
-            
-            if (IsHungry == true)
-            {
-
-                Console.WriteLine("is hungry");
-            }
-            else Console.WriteLine("is not hungry");
-        }
-
-        public void ThirstyPet()
-        {
-
-            if (IsThirsty == true)
-            {
-
-                Console.WriteLine("is thirsty");
-            }
-            else Console.WriteLine("is not thirsty");
-        }
+        //public void GiveToy(string toy)
+        //{
+        //    if (toy == "yes")
+        //    {
+        //        isBored = false;
+        //        return this.name + " now has a toy :)";
+        //    }
+        //    else if (toy == "no") ;
+        //    isBored = true;
+        //    return this.name + " has nothing to play with :(";
+        //}
 
 
     }

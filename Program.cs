@@ -14,14 +14,12 @@ namespace VPShelter
             //instantiate virtualpetbase object
 
 
-      //      DerivedVP newpet1 = new DerivedVP("Bear", "Hamster");
+      //      DerivedVP hamster = new DerivedVP("Bear", "Hamster");
 
-           DerivedVP newpet1 = new DerivedVP("Bear", "Hamster", "funny little guy", true, true, false, "orange and white", 1, "sunflower seeds");
-
-           
-
-            //      DerivedVP cat = new DerivedVP("Shanty", "Cat", "short hair, happy cat", false, false, false, "black & white", 2, "tuna");
-
+           DerivedVP hamster = new DerivedVP("Bear", "Hamster", "funny little guy", "is not hungry", "is not thirsty", "is bored", "orange and white", 1, "sunflower seeds");       
+           DerivedVP cat = new DerivedVP("Shanty", "Cat", "short hair, happy cat", "is hungry", "is thirsty", "is not bored", "black & white", 2, "tuna");
+            Volunteer emp1 = new Volunteer(true);
+                
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("Welcome to the Virtual Pet Shelter.");
@@ -29,50 +27,78 @@ namespace VPShelter
             Console.WriteLine("1. Volunteer");
             Console.WriteLine("2. Manager");
             userChoice = int.Parse(Console.ReadLine());
-            //DerivedVP hamster = new DerivedVP();
-
-            //hamster.Name = "Bear";
-            //hamster.PetType = "Hamster";
-            //hamster.IsHungry = true;
-            //hamster.IsThirsty = true;
-
-
-
-            //Console.WriteLine("To see your pet's name, type 1");
-            //Console.WriteLine("To see what type of pet you have, type 2");
-            //Console.WriteLine("To feed your pet, type 2");
-            //Console.WriteLine("To see if your pet needs some attention, type 3");
-            //Console.WriteLine("To see how old your pet is, type 4");
-            //Console.WriteLine("To see what color fur your pet has, type 5");
-            //Console.WriteLine("To see your bunny's details, type 6");
-            //Console.WriteLine("To change the color of your pet's fur, type 7");
-            //Console.WriteLine("To play with your pet, type 8");
-            //Console.WriteLine("To quit, type 9");
-            //userChoice = int.Parse(Console.ReadLine());
-            //Console.WriteLine();
-            //Console.WriteLine();
+            
+                                
             switch (userChoice)
             {
                 case 1:
-
+                    
                     Console.WriteLine("Thank you for volunteering at the Virtual Pet Shelter!");
+                    Console.Clear();
+                    Console.WriteLine();
                     Console.WriteLine("This is the status of the pets today");
+                    Console.WriteLine();
+                    Console.WriteLine(hamster.Name + " the "+ hamster.PetType + " " + hamster.IsHungry + ", " + hamster.IsThirsty + ", and " + hamster.IsBored);
 
-                    //if (newpet1.IsHungry == true)
-                    //{
-                    //    string hungry = "is hungry";
+                    Console.WriteLine(cat.Name + " the " + cat.PetType + " " + cat.IsHungry + ", " + cat.IsThirsty + ", and " + cat.IsBored);
+                    Console.WriteLine();
+                    Console.WriteLine("What would you like to do with the pets?");
 
-                    newpet1.HungryPet();
+                    do
+                    {   
+                        Console.WriteLine("1. Feed the pets");
+                        Console.WriteLine("2. Give the pets water");
+                        Console.WriteLine("3. Clean the pet cages");
+                        Console.WriteLine("4. Play with the pets");
+                        Console.WriteLine("5. Quit");
+                        
+                        userChoice = int.Parse(Console.ReadLine());
 
-                    Console.WriteLine(newpet1.Name + newpet1.IsHungry + newpet1.IsThirsty + newpet1.IsBored);
+                        switch (userChoice)
+                        {
+                            case 1:
+                                Console.Clear();
+                                emp1.FeedAllPets();                                
+                                Console.WriteLine();
+                                emp1.Message();
+                                
+                                break;
 
-                    //     Console.WriteLine(cat);
+                            case 2:
+                                Console.Clear();
+                                emp1.WaterAllPets();
+                                Console.WriteLine();
+                                emp1.Message();
+                                break;
+
+                            case 3:
+                                Console.Clear();
+                                emp1.IsClean();
+                                Console.WriteLine();
+                                emp1.Message();
+                                break;
+
+                        }
+                        
+                    } while (userChoice != 5) ;
                     break;
+
+                    
+                    
 
                 case 2:
                     Console.WriteLine("Thanks for coming to work today!");
 
                     break;
+
+
+
+
+
+
+
+
+
 
 
                     //{
