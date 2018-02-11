@@ -40,31 +40,29 @@ namespace VPShelter
             Console.WriteLine("All of the pets have been given water.");
         }
 
+        //override methods
+
         public override void GetEmployeeSalary()
         {
             Console.WriteLine("You make $25,000 a year.");
         }
 
         
-
-
+        
         public override void Quit()
         {
-            Console.WriteLine("Sorry, you can't quit- you have a contract!");
+            Console.WriteLine("Sorry, you can't quit- you have a contract, haha!");
         }
 
+        //adopt a pet method
 
         public string PetAdoption(string answer)
         {
-            if (answer == "bear")
+            if ((answer == "bear") || (answer == "shanty"))
             {
-                return "Congratulations! You've adopted a hamster!";
+                return "Congratulations! Here are some details about your new pet:";
             }
-            else if (answer == "shanty")
-            {
-                return "Congratulations, You've adopted a cat!";
-            }
-            else return "Maybe next time.";
+            else return "";
         } 
 
 

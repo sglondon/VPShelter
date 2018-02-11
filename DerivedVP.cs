@@ -3,27 +3,30 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace VPShelter
+    //addt'l fields
 {
    public class DerivedVP : VirtualPetBase
-    {  //addt'l fields
+    {  
 
-        //private string petType = "";
-        //private string petDiet = "";
+        private string petType = "";
+        private string petDiet = "";
 
 
-        ////addt'l properties
+        //addt'l properties
 
-        //public string PetType
-        //{
-        //    get { return this.petType; }
-        //    set { this.petType = value; }
-        //}
+        public string PetType
+        {
+            get { return this.petType; }
+            set { this.petType = value; }
+        }
 
-        //public string PetDiet
-        //{
-        //    get { return this.petDiet; }
-        //    set { this.petDiet = value; }
-        //}
+        public string PetDiet
+        {
+            get { return this.petDiet; }
+            set { this.petDiet = value; }
+        }
+
+        //constructors
 
         public DerivedVP()
         {
@@ -46,7 +49,7 @@ namespace VPShelter
 
         }
 
-        //methods
+        
 
        
 

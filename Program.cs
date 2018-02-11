@@ -20,7 +20,7 @@ namespace VPShelter
 
             //start menu
 
-            Console.WriteLine();
+            
             Console.WriteLine();
             Console.WriteLine("Welcome to the Virtual Pet Shelter.");
             Console.WriteLine("What type of employee are you?");
@@ -39,11 +39,11 @@ namespace VPShelter
                 Console.WriteLine("Hi Volunteer!");
                 Console.WriteLine("Here is the status of the pets today:");
                 Console.WriteLine();
-                Console.WriteLine(hamster.Name + " the " + hamster.PetType + ":" + "\n" + hamster.IsHungry + ", " + hamster.IsThirsty + "," + hamster.IsBored + ".");
+                Console.WriteLine(hamster.Name + " the " + hamster.PetType + ":" + "\n" + hamster.IsHungry + ", " + hamster.IsThirsty + "," + " and is " + hamster.IsBored + ".");
                 Console.WriteLine();
-                Console.WriteLine(cat.Name + " the " + cat.PetType + "\n" + cat.IsHungry + ", " + cat.IsThirsty + ", " + cat.IsBored + ".");
+                Console.WriteLine(cat.Name + " the " + cat.PetType + "\n" + cat.IsHungry + ", " + cat.IsThirsty + ", " + " and is " + cat.IsBored + ".");
                 Console.WriteLine();
-                Console.WriteLine("What would you like to do with the pets?");
+                Console.WriteLine("What would you like to do?");
 
                 do
                 {
@@ -158,9 +158,10 @@ namespace VPShelter
                             string answer = Console.ReadLine().ToLower();
                             Console.WriteLine(emp2.PetAdoption(answer));
                             Console.WriteLine();
+                            Console.Clear();
                             if (answer == "bear")
                             {
-                                Console.WriteLine("You've adopted a " + hamster.PetType + " named " + hamster.Name + ":" + "\n" + "he has " + hamster.ColorFur + " color fur, his favorite food is " + hamster.PetDiet + " and he is a " + hamster.Description + "!");
+                                Console.WriteLine("You adopted a " + hamster.PetType + " named " + hamster.Name + ":" + "\n" + "he has " + hamster.ColorFur + " color fur, his favorite food is " + hamster.PetDiet + " and he is a " + hamster.Description + "!");
 
                             }
 
@@ -169,8 +170,12 @@ namespace VPShelter
                                 Console.WriteLine("You've adopted a " + cat.PetType + " named " + cat.Name + ":" + "\n" + "he has " + cat.ColorFur + " color fur, his favorite food is " + cat.PetDiet + " and he is a " + cat.Description + "!");
 
                             }
+                            
                             Console.WriteLine();
+
+                            
                             emp1.Message();
+                            
                             break;
 
                         case 4:
@@ -181,6 +186,7 @@ namespace VPShelter
                             break;
 
                         case 5:
+                            Console.Clear();
                             emp2.Quit();
                             userChoice = 5;
                             break;
